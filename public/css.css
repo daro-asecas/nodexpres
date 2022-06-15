@@ -1,0 +1,34 @@
+* {
+    background-color: #ff0000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+};
+
+h1 {
+    border: solid ;
+    margin: 0 auto;
+}
+
+
+.topnav {
+    overflow: hidden;
+  }
+  .topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    width: 80px;
+  }
+  .topnav a:hover {
+    background-color: #965050;
+    color: black;
+    font-weight: bolder;
+  }
+  .topnav a.active {
+    background-color: #960000;
+    color: black;
+    font-weight: bolder;
+}
+
