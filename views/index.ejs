@@ -1,13 +1,10 @@
 <%- include("templates/cabecera", {tituloWeb: "Index"}) %>
-<%- include("templates/navbar", {   indexActiva: "active",
-                                    serviciosActiva: "",
-                                    contactoActiva: ""}) %>
-<body>
-    <h1>Este es el INDEX ejs</h1>
-    <h2><%= titulo %></h2>
-    <p>Tengo piojitos?<p>
-    <p>No.</p>
-    <a href="servicios"><p>SERVICIOS</p></a>
-</body>
+
+<%- include("templates/navbar", {activa: "index"}) %>
+<h1>Este es el INDEX ejs</h1>
+<h2><%= titulo %></h2>
+<p>Tengo piojitos?<p>
+<p>No.</p>
+<a href="servicios"><p>SERVICIOS</p></a>
+
 <%- include("templates/footer") %>
-</html>

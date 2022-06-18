@@ -1,0 +1,32 @@
+<%- include("templates/cabecera", {tituloWeb: "Index"}) %>
+
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <% if (arrayMascotas.length > 0) { %>
+                <% arrayMascotas.forEach(mascota => { %>
+                
+                    <tr>
+                        <td><%= mascota.id %></th>
+                        <td><%= mascota.nombre %></th>
+                        <td><%= mascota.descripcion %></th>
+                        <td>@asdas</th>
+                    </tr>
+
+                <% }) %>
+            <% } %>
+    
+        </tbody>
+    </table>
+</div>
+
+<%- include("templates/footer") %>

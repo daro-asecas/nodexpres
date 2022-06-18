@@ -1,5 +1,5 @@
 <div class="topnav">
-    <a class="<%= indexActiva %>" href="../">Home</a>
-    <a class="<%= serviciosActiva %>" href="../servicios">Servicios</a>
-    <a class="<%= contactoActiva %>" href="../contacto">Contacto</a>
+    <a <%- activa === 'index' ? "class='active'" : "" %> href="../">Home</a>
+    <a <%- activa === 'servicios' ? "class='active'" : "" %> href="../servicios">Servicios</a>
+    <a <%- activa === 'contacto' ? "class='active'" : "" %> href="../contacto">Contacto</a>
 </div>

@@ -9,28 +9,32 @@ app.set('views', __dirname + "/views");
 
 app.use(express.static(__dirname + "/public"));
 
-app.get('/', (req, res) => {
-  res.render("index", {titulo : "mi titulo dinamico"})
-});
 
-app.get('/index', (req, res) => {
-  res.render("index", {titulo : "mi titulo dinamico"})
-});
+// Rutas Web
+app.use('/', require('./router/RutasWeb'));
+app.use('/mascotas', require('./router/Mascotas'));
 
-app.get('/servicios', (req, res) => {
-  res.render("servicios", {titulo : "mi titulo de servicios"})
-});
-
-app.get('/contacto', (req, res) => {
-  res.render("contacto", {titulo : "titulo de contacto"})
-});
-
-app.use((req, res, next) => {
+router.use((req, res, next) => {
   res.status(404).render("404",{
-    titulo: "404",
-    descripcion: "Error 404"
+      titulo: "404",
+      descripcion: "Error 404"
   })
 });
+
+
+
+// app.get('/index', (req, res) => {
+//   res.render("index", {titulo : "mi titulo dinamico"})
+// });
+
+// app.get('/servicios', (req, res) => {
+//   res.render("servicios", {titulo : "mi titulo de servicios"})
+// });
+
+// app.get('/contacto', (req, res) => {
+//   res.render("contacto", {titulo : "titulo de contacto"})
+// });
+
 
 //
 // app.get("/", (req, res) => {
