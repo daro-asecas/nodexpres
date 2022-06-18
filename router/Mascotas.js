@@ -9,7 +9,9 @@ router.get('/', (req, res) => {
         ]
     })
 });
-  
+
+// esto no sirve aca, lo dejo por las dudas
+// ----------------------------------------
 // router.get('/:id', (req, res) => {
 //     res.render(req.params.id, {titulo : "mi titulo dinamico"})
 // });
